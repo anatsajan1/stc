@@ -1,0 +1,17 @@
+
+body
+      
+      {
+        background-image: url(photo.jpg);
+        background-repeat: no-repeat;
+        background-size: 1400px, 600px;
+        font-size: bold;
+      }
+
+form{background-color:rgb(192, 186, 228); 
+  margin-right:500px;margin-left: 500px; 
+  margin-top: 10px ;margin-bottom: 10px;
+      padding-bottom: 30px;
+      font-size: bold;
+     
+}
