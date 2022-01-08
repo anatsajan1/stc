@@ -12,9 +12,7 @@
          
          $sql ="INSERT INTO `reg` (`name`,`address`,`email`,`number`,`uname`,`pwd`,`cpwd`) 
          VALUES ('$name','$address','$email','$number','$uname','$pwd','$cpwd')";
-         $login="INSERT INTO `login`(`email`,`pwd`,`type`)
-         VALUES('$email','$pwd','student')";
-         $query = mysqli_query($conn,$sql,$login);
+         $query = mysqli_query($conn,$sql);
          if($query){
              echo 'entry successfull';
          }
