@@ -18,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $pwd=$_POST['pwd'];
     $cpwd=$_POST['cpwd'];
 	
-   $sql = "Select * from register where email= '$email'";
+   $sql = "Select * from reg where email= '$email'";
    
    $result = mysqli_query($conn, $sql);
 	
@@ -36,14 +36,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 			// Password Hashing is used here.
             $sql ="INSERT INTO reg (name,address,email,number,uname,pwd,cpwd) 
             VALUES ('$name','$address','$email','$number','$uname','$pwd','$cpwd')";
-			$sql="INSERT INTO login(email,pwd,type) VALUES ('$email','$pwd','student')";
+			//$sql="INSERT INTO login(email,pwd,type) VALUES ('$email','$pwd','student')";
 	
 			$result = mysqli_query($conn, $sql);
 	
 			if ($result) {
 				$showAlert = true;
 				
-				echo "Entery Successfully";
+				echo "Entry Successfully";
 			
 			}
 		}
