@@ -2,7 +2,7 @@ body
 {
         margin: 0;
         padding: 0;
-        background: url(bus.jpg);
+        background:url(bus.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         font-size: bold;
@@ -14,7 +14,7 @@ body
     height: auto;
     background:rgb(19, 2, 2);
     color: white;
-    top: 80%;
+    top: 70%;
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
@@ -35,7 +35,7 @@ body
 
 h1{
   margin: 0;
-  padding: 0 0 20px;
+  padding: 35px 0 20px;
   text-align: center;
   font-size: 22px;
 
@@ -63,7 +63,7 @@ h1{
 
  }
 
-.regform input[type="button"]
+.regform input[type="submit"]
  {
    border:none;
    outline: none;
@@ -78,6 +78,7 @@ h1{
 button
  {
    border:none;
+   align-self: center;
    outline: none;
    height: 40px;
    width: 117px;
@@ -87,7 +88,7 @@ button
    border-radius:20px;
  }
  
-.regform input[type="button"]:hover
+.regform input[type="submit"]:hover
  {
    cursor:pointer;
    background: #ffc107;
@@ -98,7 +99,7 @@ button
    text-decoration: none;
    font-size: 12px;
    line-height: 20px;
-   color:brown;
+   color:rgba(248, 240, 240, 0.966);
 
  }
 .regform a:hover

@@ -36,15 +36,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 			// Password Hashing is used here.
             $sql ="INSERT INTO reg (name,address,email,number,uname,pwd,cpwd) 
             VALUES ('$name','$address','$email','$number','$uname','$pwd','$cpwd')";
-			//$sql="INSERT INTO login(email,pwd,type) VALUES ('$email','$pwd','student')";
+			$sql2="INSERT INTO login(email,pwd,type) VALUES ('$email','$pwd','student')";
 	
 			$result = mysqli_query($conn, $sql);
+			$result2 = mysqli_query($conn, $sql2);
+
+
+
 	
-			if ($result) {
-				$showAlert = true;
+			 if ($result){
+				 if ($result2){
+					$showAlert = true;
 				
-				echo "Entry Successfully";
-			
+					echo "Entry Successfully"; 
+			     }
 			}
 		}
 		else {

@@ -18,6 +18,8 @@ if($count==1)
     header("Location: ../student/home.html");
 }
 
+
+
 else{
     echo "Invalid username or password";
 }

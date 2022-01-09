@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Application Form</title>
+		<link rel="stylesheet" type="text/css" href="../reg.css">
+	</head>
+<body>
+  <div class="regform">
+		
+		<h1>Register Here</h1>
+	  <form action="connection/registerationconnection.php" method="POST">
+		<p>Name</p>
+		<input type="text" name="name" placeholder="Enter Name"required>
+		<p>Address</p>
+		<input type="text" name="address" placeholder="Enter Address"required>
+		<p>Gender</p>
+		<input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="other">Other
+		<p>Date of Birth</p>
+		<input type="text" name="dob" placeholder="Enter number"required>
+		<p> Email</p>
+		<input type="text" name="email" placeholder="Enter email"required>
+		<p>Mobile Number</p>
+		<input type="text" name="number" placeholder="Enter mobilenumber"required>
+		<p>Institude Name</p>
+		<input type="text" name="institudename" placeholder="Enter institudename"required>
+        <p>Where to Where</p>
+		<input type="text" name="wheretowhere" placeholder="Enter wheretowhere"required>
+        <div class="form-input">
+            <label for="w3lName">Image</label>
+            <input type="file" name="file" id="w3lImage" placeholder="Image*" required="">
+        </div>
+		<input type="button" name="" value="Submit">
+		
+	  </form>
+
+	    <button><a id="logout" href="home.html">Logout</a></button>
+	</div>
+</body>
+</html>
