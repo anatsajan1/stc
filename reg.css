@@ -50,7 +50,9 @@ h1{
 .regform input{
    width: 100%;
    margin-bottom: 20px;
+
  }
+
 .regform input[type="text"], input[type="password"]
  {
     border: none;
@@ -93,7 +95,7 @@ button
    cursor:pointer;
    background: #ffc107;
    color:#fff;
-
+   
  }
 .regform a{
    text-decoration: none;

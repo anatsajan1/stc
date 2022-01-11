@@ -48,7 +48,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 				 if ($result2){
 					$showAlert = true;
 				
-					echo "Entry Successfully"; 
+					header('LOCATION:../userlogin.html'); 
+					
 			     }
 			}
 		}
