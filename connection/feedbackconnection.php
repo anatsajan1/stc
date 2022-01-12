@@ -22,7 +22,7 @@ $message = $_POST['message'];
 $sql = "INSERT INTO feedback (`name`, `address`, `email`, `message`)
 VALUES ('$name', '$email', '$address', '$message')";
 if ($conn->query($sql) === TRUE) {
-  echo "Feedback added successfully";
+  header('location:../student/home.html');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
