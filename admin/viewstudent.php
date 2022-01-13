@@ -32,7 +32,7 @@ if(!isset($_SESSION["admin"]))
                         <th>UNAME</th>
 
 
-<th>decline</th>
+
 
             
                       </tr>
@@ -55,8 +55,7 @@ if(!isset($_SESSION["admin"]))
              <td><?php echo $rs["number"]; ?></td>
              <td><?php echo $rs["uname"]; ?></td>        
       	
-        <td><a href="decline.php =<?php echo $rs["email"]; ?>"><title="Decline"></i>Decline</a></td>
-      			 
+        
           
 
 			 

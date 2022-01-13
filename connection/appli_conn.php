@@ -18,7 +18,7 @@ if (mysqli_connect_errno())
   
       
   $name=$_POST['name'];
-//  $file=$_POST['file'];
+  $image=$_POST['image'];
   $address=$_POST['address'];
   $gender=$_POST['rbgender'];
   $dob=$_POST['dob'];
@@ -29,8 +29,8 @@ if (mysqli_connect_errno())
   $wtw=$_POST['wheretowhere'];
 
 
-  $sql ="INSERT INTO requestform (`name`,`address`,`dob`,`email`,`number`,`place`,`institutename`,`wheretowhere`,`status`) 
-  VALUES ('$name','$address','$dob','$email','$number','$place','$institute','$wtw','0')";
+  $sql ="INSERT INTO requestform (`name`,`image`,`address`,`dob`,`email`,`number`,`place`,`institutename`,`wheretowhere`,`status`) 
+  VALUES ('$name','$image','$address','$dob','$email','$number','$place','$institute','$wtw','0')";
       if (mysqli_query($conn, $sql))
       {
           header("location:../student/feedback.html");

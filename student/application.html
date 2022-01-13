@@ -10,11 +10,10 @@
 		<h1>Appplication Form</h1>
 	  <form action="../connection/appli_conn.php" method="POST">
 		<p>Name</p>
-		<input type="text" name="name" placeholder="Enter Name"required>
-		<div class="form-input">
-           <label for="w3lName">Image</label>
-            <input type="file" name="file" id="w3lImage" placeholder="Image*" required="">
-        </div>
+		<input type="text" name="name" placeholder="Enter Name"required autofocus>
+		<div class="form-input"></div>
+		<p>Image</p>
+		<input type="file" name="image" placeholder="Choose an image from the file" required>
 		<p>Address</p>
 		<input type="text" name="address" placeholder="Enter Address"required>
 	    <p>Gender</p>
@@ -31,13 +30,13 @@
 		<p> Email</p>
 		<input type="email" name="email" placeholder="Enter email"required>
 		<p>Mobile Number</p>
-		<input type="text" name="number"  maxlenght="10" minlength="10" pattern="[0-9]+" placeholder="Enter mobile number" required>  
+		<input type="text" name="number" pattern="[0-9]+" maxlength="10" minlength="10" placeholder="Enter number"required>
 		<p>Place</p>
 		<input type="text" name="place" placeholder="Enter your place"required>
 		<p>Institude Name</p>
 		<input type="text" name="institutename" placeholder="Enter institutename"required>
         <p>Where to Where</p>
-		<input type="text" name="wheretowhere" placeholder="Enter wheretowhere"required>
+		<input type="text" name="wheretowhere" placeholder="Enter wheretowhere"required autofocus>
         
 		<button type="submit" name="submit">Submit</button>
 		

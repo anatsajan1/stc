@@ -1,7 +1,19 @@
 <?php
 include('connection.php');
-$did=$_GET['userid'];
-qry="UPDATE tbllogin SET `status`='1' WHERE `uid`="+id;
-header('location:view.php');
-
+//$status=$_GET['status']
+$get_email=$_GET['email'];
+mysql_query($conn,"update `requestform` SET `status`='1' where `email`='$get_email'")or die(mysql_error());
+header('location:adminhome.html');
 ?>
+
+
+
+
+
+
+
+
+
+
+
+

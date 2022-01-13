@@ -15,13 +15,16 @@ $count = mysqli_num_rows($result);
 
 if($count>=1)
 {
-    header("Location: ../student/home.html");
+    echo "<script> alert('Login Successfully..!');
+			window.location='../student/home.html'</script>";
 }
 
 
 
 else{
-    echo "Invalid username or password";
+    $showError = "Password or Username do not match";
+			
+			
 }
 
 }

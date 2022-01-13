@@ -1,3 +1,4 @@
+
 <?php
 include("connection.php");
 session_start();
@@ -37,8 +38,11 @@ if(!isset($_SESSION["admin"]))
                         <th>PLACE</th>
                         <th>INSTITUTE NAME</th>
                         <th>WHERE TO WHERE</th>
+                        <th>STATUS</th>
+                        
+                        <th>Approve</th>
                         <th>decline</th>
-
+                      
 
 
 
@@ -48,7 +52,7 @@ if(!isset($_SESSION["admin"]))
                     <tbody>
                     <?php
 
-    $res=mysqli_query($conn,"select * from requestform");
+    $res=mysqli_query($conn,"select * from requestform where status='0'");
 	
     $i=1;
     while($rs=mysqli_fetch_array($res))
@@ -58,7 +62,9 @@ if(!isset($_SESSION["admin"]))
          <tr>
 		 <td><?php echo $i++;?></td>
              <td><?php echo $rs["name"]; ?></td>
-             <td><?php echo $rs["image"]; ?></td>
+             <td><?php  $pathx="../image/"; 
+             echo $file=$rs["image"];
+             echo '<img src="'.$pathx.$file.'"height=100 width=100>';?></td>
              <td><?php echo $rs["address"]; ?></td>
              <td><?php echo $rs["gender"]; ?></td>
              <td><?php echo $rs["dob"]; ?></td>
@@ -66,9 +72,14 @@ if(!isset($_SESSION["admin"]))
              <td><?php echo $rs["number"]; ?></td>
              <td><?php echo $rs["place"]; ?></td> 
              <td><?php echo $rs["institutename"]; ?></td> 
-             <td><?php echo $rs["wheretowhere"]; ?></td>      
+             <td><?php echo $rs["wheretowhere"]; ?></td>  
+             <td><?php echo $rs["status"] ;?></td>
+             
       	
-        <td><a href="decline.php =<?php echo $rs["email"]; ?>"><title="Decline"></i>Decline</a></td>
+            <!-- <td><a href="delete-process.php?userid=<?php echo $row["userid"]; ?>">Delete</a></td>-->
+        <td><a href="approvestudent.php?email=<?php echo $rs["email"]; ?>"><title="Approve">Approve</a></td>
+        <td><a href="declinerequest.php?email =<?php echo $rs["email"]; ?>"><title="Approve">Decline</a></td>
+      
       			 
           
 

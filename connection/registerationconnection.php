@@ -47,15 +47,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 			 if ($result){
 				 if ($result2){
 					$showAlert = true;
-				
-					header('LOCATION:../userlogin.html'); 
+					echo "<script> alert('Registeration is Successfull...!');
+					window.location='../userlogin.html'</script>"; 
 					
 			     }
 			}
 		}
 		else {
 			$showError = "Passwords do not match";
-			echo "Passwords do not match";
+			echo "<script> alert('Conform Passwords do not match');
+			window.location='../reg.html'</script>";
+			
 		}	
 	}// end if
 	
