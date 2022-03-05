@@ -20,7 +20,7 @@ $message = $_POST['message'];
 
 
 $sql = "INSERT INTO feedback (`name`, `address`, `email`, `message`)
-VALUES ('$name', '$email', '$address', '$message')";
+VALUES ('$name', '$address', '$email', '$message')";
 if ($conn->query($sql) === TRUE) {
   header('location:../student/home.html');
 } else {

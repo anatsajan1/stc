@@ -1,6 +1,5 @@
 <?php
 
-
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -33,7 +32,8 @@ if (mysqli_connect_errno())
   VALUES ('$name','$image','$address','$dob','$email','$number','$place','$institute','$wtw','0')";
       if (mysqli_query($conn, $sql))
       {
-          header("location:../student/feedback.html");
+        //echo "Error:";
+        header("location:../student/feedback.html");
       }
       else
       {

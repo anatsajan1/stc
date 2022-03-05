@@ -30,3 +30,5 @@ else{
 }
 
 ?>
+<!--echo "<script> alert('Sumit Successfully!!'); 
+        //window.location='../student/feedback.html';</script>

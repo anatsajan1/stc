@@ -1,20 +1,18 @@
 <?php
-include("connection.php");
+include("../connection/connection.php");
 session_start();
 if(!isset($_SESSION["admin"]))
 {
 ?>
-<script type="text/javascript">
-  window.location="feedbackview.php";
-</script>
+
 <?php
 }
 ?>
-
+ 
 
 
 <html>
-	<head>
+  <head>
 		<title>home page</title>
 		<link rel="stylesheet" type="text/css" href="admin.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,26 +37,37 @@ if(!isset($_SESSION["admin"]))
 	
 				</ul>
 			</div>
-					
-<h1>Feedbacks..</h1>
+  <link rel="stylesheet" type="text/css" href="../admin/admin.css">
+  </head>
+<body  class="s">
+<nav class="navbar">
+<h1>Applications</h1>
 
-    
                   <table border=3>
                     <thead>
                       <tr>
                       
                       <th>SI NUMBER</th>
                         <th>NAME</th>
-                        <th>ADDRESS</th>                    
+                        <th>IMAGE</th>
+                        <th>ADDRESS</th> 
+                        <th>GENDER</th> 
+                        <th>DATE OF BIRTH</th>                   
                         <th>EMAIL</th>
-                        <th>MESSAGE</th>
-                
+                        <th>NUMBER</th>
+                        <th>PLACE</th>
+                        <th>INSTITUTE NAME</th>
+                        <th>WHERE TO WHERE</th>
+                        <th>YOUR APPLICATION STATUS</th>
+            
                       </tr>
                     </thead>
                     <tbody>
                     <?php
+                    
+                    $email=$_POST['email'];
 
-    $res=mysqli_query($conn,"select * from feedback");
+    $res=mysqli_query($conn,"select * from requestform where email='$email'");
 	
     $i=1;
     while($rs=mysqli_fetch_array($res))
@@ -68,12 +77,18 @@ if(!isset($_SESSION["admin"]))
          <tr>
 		 <td><?php echo $i++;?></td>
              <td><?php echo $rs["name"]; ?></td>
+             <td><?php  $pathx="../image/"; 
+             echo $file=$rs["image"];
+             echo '<img src="'.$pathx.$file.'"height=100 width=100>';?></td>
              <td><?php echo $rs["address"]; ?></td>
-             <td><?php echo $rs["email"]; ?></td>
-             <td><?php echo $rs["message"]; ?></td>
-                
-      	
-        
+             <td><?php echo $rs["gender"]; ?></td>
+             <td><?php echo $rs["dob"]; ?></td>
+             <td><?php echo $rs["email"]; $email=$rs["email"]; ?></td>
+             <td><?php echo $rs["number"]; ?></td>
+             <td><?php echo $rs["place"]; ?></td> 
+             <td><?php echo $rs["institutename"]; ?></td> 
+             <td><?php echo $rs["wheretowhere"]; ?></td>  
+             <td><?php echo $rs["status"]; ?></td>
             
           </tr>
         <?php
