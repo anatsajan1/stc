@@ -48,12 +48,12 @@ if(!isset($_SESSION["admin"]))
                     <thead>
                       <tr>
                       
-                      <th>SI NUMBER</th>
-                        <th>NAME</th>
-                        <th>ADDRESS</th>                     
-                        <th>EMAIL</th>
-                        <th>NUMBER</th>
-                        <th>UNAME</th>
+                      <th>SI NUMBER</th><th></th>
+                        <th>NAME</th><th></th>
+                        <th>ADDRESS</th> <th></th>                    
+                        <th>EMAIL</th><th></th>
+                        <th>NUMBER</th><th></th>
+                        <th>UNAME</th><th></th>
 
 
 
@@ -72,12 +72,12 @@ if(!isset($_SESSION["admin"]))
 	
         ?>
          <tr>
-		 <td><?php echo $i++;?></td>
-             <td><?php echo $rs["name"]; ?></td>
-             <td><?php echo $rs["address"]; ?></td>
-             <td><?php echo $rs["email"]; ?></td>
-             <td><?php echo $rs["number"]; ?></td>
-             <td><?php echo $rs["uname"]; ?></td>        
+		 <td><?php echo $i++;?></td><td></td>
+             <td><?php echo $rs["name"]; ?></td><td></td>
+             <td><?php echo $rs["address"]; ?></td><td></td>
+             <td><?php echo $rs["email"]; ?></td><td></td>
+             <td><?php echo $rs["number"]; ?></td><td></td>
+             <td><?php echo $rs["uname"]; ?></td><td></td>        
       	
         
           
