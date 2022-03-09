@@ -38,12 +38,12 @@ if(!isset($_SESSION["admin"]))
 			      	</ul>
 		       	</div>
         </header>
-
+        <h1>Applications...</h1>
 
       
     
                   <table border='3'>
-                  
+                  <thead>
                       <tr>
                       
                       <th>SI NUMBER</th>
@@ -66,7 +66,8 @@ if(!isset($_SESSION["admin"]))
 
             
                       </tr>
-                    
+                  </thead>
+                  <tbody>
                     
                     <?php
 
@@ -99,11 +100,11 @@ if(!isset($_SESSION["admin"]))
       			 
                       
           </tr>
-    </table>
+   
         <?php
     }
 ?>   
-                                  
+                     </tbody>                           
                    
 </body>
 </html>
